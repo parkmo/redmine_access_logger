@@ -5,7 +5,7 @@ Redmine::Plugin.register :redmine_access_logger do
   author 'Kiwamu Kato , parkmo'
   description 'access.log plugin'
   version '0.1.0'
-  url 'http://example.com/path/to/plugin'
-  author_url 'http://example.com/about'
+  url 'https://github.com/parkmo/redmine_access_logger'
+  author_url 'https://github.com/kiwamu/redmine_access_logger'
 end
 
