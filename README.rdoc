@@ -1,15 +1,15 @@
 = redmine_access_logger
 
-* Redmine で操作ログを出力するためのプラグインです。
-* Apache の access.log や Rails の production.log ではユーザー名が含まれていないので、プラグイン形式で独自ロガーを用意しました。
+* This plugin provide access.log for redmine.
+* Original author : kiwamu
+* I made this for working in redmine 3.3.3.
 
-== 使い方
+== Useage
 
-* REDMINE_ROOT/vendor/plugins 以下に配置するだけです。
-* production モードのみで動きます。
-* 操作ログは、REDMINE_ROOT/log/access.log に出力されます。
+* Install this plugin in REDMINE_ROOT/vendor/plugins.
+* This plugin only works in production mode.
 
-== ログの出力例
+== Example of access.log.
 
  I, [2011-11-17T01:04:54.315281 #10902]  INFO -- : admin {"action":"logout","controller":"account","user":"admin"}
  I, [2011-11-17T01:04:54.378765 #10902]  INFO -- : - {"action":"index","controller":"welcome","user":""}

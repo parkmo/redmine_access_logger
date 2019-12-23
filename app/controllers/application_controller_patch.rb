@@ -26,7 +26,7 @@ module AccessLoggerPlugin
         req_param = p.update({"user" => User.current.login}).to_json
         user = User.current.login.blank? ? "-" : User.current.login
         message = "#{user} #{req_param}" 
-        log = Logger.new(File.join(RAILS_ROOT, "/log/access.log"), "weekly") 
+        log = Logger.new("log/access.log", "weekly") 
         log.formatter = Logger::Formatter.new 
         log.info(message) 
         log.close
