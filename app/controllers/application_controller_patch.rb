@@ -7,7 +7,7 @@ module AccessLoggerPlugin
       base.send(:include, InstanceMethods)     
       base.class_eval do      
         unloadable
-        before_filter :access_logging
+        before_action :access_logging
       end
     end
     
@@ -23,8 +23,9 @@ module AccessLoggerPlugin
         p.delete(:attachments) 
         p.delete(:file) 
 
-        req_param = p.update({"user" => User.current.login}).to_json
         user = User.current.login.blank? ? "-" : User.current.login
+#        p["user"] = user
+        req_param = p.to_json
         message = "#{request.remote_ip} #{user} #{req_param}" 
         log = Logger.new("log/access.log", "weekly") 
         log.formatter = Logger::Formatter.new 
