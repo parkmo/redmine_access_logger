@@ -11,11 +11,11 @@
 
 == Example of access.log.
 
- I, [2011-11-17T01:04:54.315281 #10902]  INFO -- : admin {"action":"logout","controller":"account","user":"admin"}
+ I, [2011-11-17T01:04:54.315281 #10902]  INFO -- : 1.1.1.1 admin {"action":"logout","controller":"account","user":"admin"}
  I, [2011-11-17T01:04:54.378765 #10902]  INFO -- : - {"action":"index","controller":"welcome","user":""}
  I, [2011-11-17T01:04:59.661088 #10902]  INFO -- : - {"action":"login","controller":"account","user":""}
- I, [2011-11-17T01:05:30.168098 #10902]  INFO -- : admin {"action":"index","controller":"welcome","user":"admin"}
- I, [2011-11-17T01:05:33.770548 #10902]  INFO -- : admin {"action":"show","id":"devs","controller":"projects","user":"admin"}
- I, [2011-11-17T01:05:37.709849 #10902]  INFO -- : admin {"project_id":"devs","action":"index","controller":"issues","user":"admin"}
- I, [2011-11-17T01:05:41.035208 #10902]  INFO -- : admin {"action":"show","id":"819","controller":"issues","user":"admin"}
+ I, [2011-11-17T01:05:30.168098 #10902]  INFO -- : 1.1.1.1 admin {"action":"index","controller":"welcome","user":"admin"}
+ I, [2011-11-17T01:05:33.770548 #10902]  INFO -- : 1.1.1.1 admin {"action":"show","id":"devs","controller":"projects","user":"admin"}
+ I, [2011-11-17T01:05:37.709849 #10902]  INFO -- : 1.1.1.1 admin {"project_id":"devs","action":"index","controller":"issues","user":"admin"}
+ I, [2011-11-17T01:05:41.035208 #10902]  INFO -- : 1.1.1.1 admin {"action":"show","id":"819","controller":"issues","user":"admin"}
  ...
