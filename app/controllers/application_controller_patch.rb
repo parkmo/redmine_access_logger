@@ -20,8 +20,11 @@ module AccessLoggerPlugin
         p.delete(:new_password_confirmation) 
         
         # ad-hoc fix for "redundant UTF-8 sequence" in String#to_json
-        p.delete(:attachments) 
-        p.delete(:file) 
+        p.delete(:attachments)
+        p.delete(:file)
+        p.delete(:person)
+        p.delete(:custom_field_values)
+        p.delete(:person_avatar)
 
         user = User.current.login.blank? ? "-" : User.current.login
 #        p["user"] = user
